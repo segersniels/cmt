@@ -1,8 +1,8 @@
 # cmt
 
-![demo](demo.gif)
-
 `cmt` (short for commit) is a command-line tool designed to help developers write consistent and standardized commit messages across different commit conventions.
+
+![demo](demo.gif)
 
 ## Conventions
 
@@ -44,4 +44,4 @@ Follow the interactive prompts to construct your commit.
 
 ## Configuration
 
-CMT uses a `.cmtrc.json` file to store configuration. You can edit this file manually or run `cmt init` to set up your preferences.
+`cmt` uses a `.cmtrc.json` file to store configuration. You can edit this file manually or run `cmt init` to set up your preferences.
