@@ -15,6 +15,15 @@ Supported conventions at the time of writing:
 - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - [Gitmoji](https://gitmoji.dev/)
 
+## Install
+
+```bash
+# Install in the current directory
+curl -sSL https://raw.githubusercontent.com/segersniels/cmt/master/scripts/install.sh | bash
+# Install in /usr/local/bin
+curl -sSL https://raw.githubusercontent.com/segersniels/cmt/master/scripts/install.sh | sudo bash -s /usr/local/bin
+```
+
 ## Usage
 
 First initialize `cmt` in your project:
