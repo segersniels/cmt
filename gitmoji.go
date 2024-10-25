@@ -143,7 +143,7 @@ func (g *Gitmoji) ask() (string, error) {
 		Options(options...).
 		Value(&emoji).
 		Filtering(true).
-		Height(15).
+		Height(10).
 		Validate(func(val string) error {
 			if val == "" {
 				return errors.New("type cannot be empty")
