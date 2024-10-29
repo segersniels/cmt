@@ -60,7 +60,8 @@ func determineConvention() (Provider, error) {
 
 		fallback, err := determineConventionFromCommitMessage()
 		if err != nil {
-			return nil, err
+			// TODO: Let user configure a default convention
+			return NewConventional(), nil
 		}
 
 		log.Debug("falling back to last used convention", "provider", fallback.Type())
