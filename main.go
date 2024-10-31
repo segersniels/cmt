@@ -6,6 +6,7 @@ import (
 
 	"github.com/charmbracelet/huh"
 	log "github.com/charmbracelet/log"
+	updater "github.com/segersniels/updater"
 	"github.com/urfave/cli/v2"
 )
 
@@ -20,7 +21,8 @@ func main() {
 		log.SetLevel(log.DebugLevel)
 	}
 
-	err := checkIfNewVersionIsAvailable()
+	updater := updater.NewUpdater(AppName, AppVersion, "segersniels")
+	err := updater.CheckIfNewVersionIsAvailable()
 	if err != nil {
 		log.Debug("Failed to check for latest release", "error", err)
 	}
@@ -34,7 +36,7 @@ func main() {
 				Name:  "update",
 				Usage: "Update convit to the latest version",
 				Action: func(ctx *cli.Context) error {
-					return update()
+					return updater.Update()
 				},
 			},
 			{

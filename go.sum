@@ -53,6 +53,10 @@ github.com/russross/blackfriday/v2 v2.1.0 h1:JIOH55/0cWyOuilr9/qlrm0BSXldqnqwMsf
 github.com/russross/blackfriday/v2 v2.1.0/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=
 github.com/segersniels/config v0.0.0-20240503115636-403023c44d9f h1:Hryp2S1kBLyBv78hV2/YQPzwz5xYy0VsixFBqYNXfHc=
 github.com/segersniels/config v0.0.0-20240503115636-403023c44d9f/go.mod h1:ZtYAvjzw4Y8B72nIjqWUnwYKeveEfiNbUilY/ts5MYE=
+github.com/segersniels/updater v0.0.0-20241031150917-1be678871fa0 h1:6gbJe9iZav8WWygfqK08oR+MwPe3g1ieDGV2RBR34GE=
+github.com/segersniels/updater v0.0.0-20241031150917-1be678871fa0/go.mod h1:juYAsHmCiloHlG6YBrtRxoptQ3RZZswcktMtqQBQaBM=
+github.com/segersniels/updater v0.0.0-20241031151326-3be49bc594fe h1:L9gyh469EDIfmJkjVxyBVrY4BlDAUal1kNYg+k5w1yU=
+github.com/segersniels/updater v0.0.0-20241031151326-3be49bc594fe/go.mod h1:juYAsHmCiloHlG6YBrtRxoptQ3RZZswcktMtqQBQaBM=
 github.com/urfave/cli/v2 v2.27.5 h1:WoHEJLdsXr6dDWoJgMq/CboDmyY/8HMMH1fTECbih+w=
 github.com/urfave/cli/v2 v2.27.5/go.mod h1:3Sevf16NykTbInEnD0yKkjDAeZDS0A6bzhBH5hrMvTQ=
 github.com/xrash/smetrics v0.0.0-20240521201337-686a1a2994c1 h1:gEOO8jv9F4OT7lGCjxCBTO/36wtF6j2nSip77qHd4x4=
