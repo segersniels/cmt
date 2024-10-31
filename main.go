@@ -34,7 +34,7 @@ func main() {
 		Commands: []*cli.Command{
 			{
 				Name:  "update",
-				Usage: "Update convit to the latest version",
+				Usage: "Update to the latest version",
 				Action: func(ctx *cli.Context) error {
 					return updater.Update()
 				},
