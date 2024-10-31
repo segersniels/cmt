@@ -1,5 +1,5 @@
 BINARY_NAME := cmt
-VERSION := 1.0.2
+VERSION := 1.0.3
 BUILD_DIR := bin
 
 TARGETS := darwin-arm64 darwin-amd64 linux-arm64 linux-amd64
