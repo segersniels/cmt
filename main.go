@@ -76,6 +76,12 @@ func main() {
 				Name:    "commit",
 				Aliases: []string{"c"},
 				Usage:   "Create a new commit",
+				Flags: []cli.Flag{
+					&cli.BoolFlag{
+						Name:  "allow-empty",
+						Usage: "Allow the commit message to be empty",
+					},
+				},
 				Action: func(ctx *cli.Context) error {
 					convention, err := determineConvention()
 					if err != nil {
@@ -87,7 +93,12 @@ func main() {
 						return err
 					}
 
-					cmd := exec.Command("git", "commit", "-m", msg)
+					args := []string{"commit", "-m", msg}
+					if ctx.Bool("allow-empty") {
+						args = append(args, "--allow-empty")
+					}
+
+					cmd := exec.Command("git", args...)
 					return cmd.Run()
 				},
 			},
