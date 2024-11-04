@@ -21,8 +21,8 @@ func main() {
 		log.SetLevel(log.DebugLevel)
 	}
 
-	updater := updater.NewUpdater(AppName, AppVersion, "segersniels")
-	err := updater.CheckIfNewVersionIsAvailable()
+	upd := updater.NewUpdater(AppName, AppVersion, "segersniels")
+	err := upd.CheckIfNewVersionIsAvailable()
 	if err != nil {
 		log.Debug("Failed to check for latest release", "error", err)
 	}
@@ -36,7 +36,7 @@ func main() {
 				Name:  "update",
 				Usage: "Update to the latest version",
 				Action: func(ctx *cli.Context) error {
-					return updater.Update()
+					return upd.Update()
 				},
 			},
 			{
