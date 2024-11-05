@@ -26,6 +26,11 @@ curl -sSL https://raw.githubusercontent.com/segersniels/cmt/master/scripts/insta
 
 ## Usage
 
+### Existing project
+
+You can choose to use `cmt` in an existing project without adding a new configuration file.
+If no `.cmtrc.json` file is found, `cmt` will attempt to determine the commit convention from the last commit message.
+
 ### New project
 
 First initialize `cmt` in your project:
@@ -49,11 +54,6 @@ cmt c
 ```
 
 Follow the interactive prompts to construct your commit.
-
-### Existing project
-
-You can choose to use `cmt` in an existing project without adding a new configuration file.
-If no `.cmtrc.json` file is found, `cmt` will attempt to determine the commit convention from the last commit message.
 
 ## Configuration
 
