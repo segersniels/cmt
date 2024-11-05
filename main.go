@@ -40,7 +40,8 @@ func main() {
 				},
 			},
 			{
-				Name: "init",
+				Name:  "init",
+				Usage: "Initialize a new project",
 				Action: func(ctx *cli.Context) error {
 					var (
 						convention ConventionType
