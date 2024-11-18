@@ -37,7 +37,8 @@ func isEmoji(s string) bool {
 }
 
 func determineConventionFromCommitMessage() (Provider, error) {
-	msg, err := exec.Command("git", "log", "-1", "--pretty=%B").Output()
+	// Get last commit message excluding merge commits
+	msg, err := exec.Command("git", "log", "-1", "--no-merges", "--pretty=%B").Output()
 	if err != nil {
 		return nil, err
 	}
