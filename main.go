@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"os/exec"
 
@@ -100,7 +101,12 @@ func main() {
 					}
 
 					cmd := exec.Command("git", args...)
-					return cmd.Run()
+					output, err := cmd.CombinedOutput()
+					if err != nil {
+						return fmt.Errorf("%s: %s", err, string(output))
+					}
+
+					return nil
 				},
 			},
 		},
