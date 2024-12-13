@@ -1,0 +1,44 @@
+{
+  "name": "@segersniels/cmt",
+  "version": "1.1.2",
+  "description": "A command-line tool designed to help developers write consistent and standardized commit messages across different commit conventions.",
+  "main": "index.js",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "scripts"
+  ],
+  "bin": {
+    "cmt": "./bin/cmt"
+  },
+  "scripts": {
+    "preinstall": "mkdir -p $(npm root -g)/@segersniels/cmt/bin && ./scripts/install.sh $(npm root -g)/@segersniels/cmt/bin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segersniels/cmt.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "cli",
+    "convention",
+    "prompt",
+    "gitmoji",
+    "dx",
+    "commit",
+    "gitmoji-cli",
+    "commit-message",
+    "conventional-commits",
+    "charmbracelet"
+  ],
+  "author": "Niels Segers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/segersniels/cmt/issues"
+  },
+  "homepage": "https://github.com/segersniels/cmt#readme"
+}

@@ -49,3 +49,6 @@ jobs:
           makeLatest: true
           prerelease: false
           replacesArtifacts: true
+      - name: Publish to NPM
+        if: steps.check_tag.outputs.exists == 'false'
+        run: npm publish

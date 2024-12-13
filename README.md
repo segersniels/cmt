@@ -17,6 +17,14 @@ Supported conventions at the time of writing:
 
 ## Install
 
+### NPM
+
+```bash
+npm install -g @segersniels/cmt
+```
+
+### Script
+
 ```bash
 # Install in the current directory
 curl -sSL https://raw.githubusercontent.com/segersniels/cmt/master/scripts/install.sh | bash
