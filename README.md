@@ -1,5 +1,8 @@
 # cmt
 
+[![npm](https://img.shields.io/npm/v/@segersniels/cmt)](https://www.npmjs.com/package/@segersniels/cmt)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/segersniels/cmt/ci.yml)
+
 `cmt` (short for commit) is a command-line tool designed to help developers write consistent and standardized commit messages across different commit conventions.
 
 ![demo](demo.gif)
