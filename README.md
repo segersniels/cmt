@@ -1,7 +1,6 @@
 # cmt
 
-[![npm](https://img.shields.io/npm/v/@segersniels/cmt)](https://www.npmjs.com/package/@segersniels/cmt)
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/segersniels/cmt/ci.yml)
+[![npm](https://img.shields.io/npm/v/@segersniels/cmt)](https://www.npmjs.com/package/@segersniels/cmt)![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/segersniels/cmt/ci.yml)
 
 `cmt` (short for commit) is a command-line tool designed to help developers write consistent and standardized commit messages across different commit conventions.
 
@@ -35,12 +34,13 @@ curl -sSL https://raw.githubusercontent.com/segersniels/cmt/master/scripts/insta
 curl -sSL https://raw.githubusercontent.com/segersniels/cmt/master/scripts/install.sh | sudo bash -s /usr/local/bin
 ```
 
+Or download one of the released binaries for your operating system [here](https://github.com/segersniels/cmt/releases).
+
 ## Usage
 
 ### Existing project
 
-You can choose to use `cmt` in an existing project without adding a new configuration file.
-If no `.cmtrc.json` file is found, `cmt` will attempt to determine the commit convention from the last commit message.
+You can choose to use `cmt` in an existing project without adding a new configuration file. If no `.cmtrc.json` file is found, `cmt` will attempt to determine the commit convention from the last commit message.
 
 ### New project
 
