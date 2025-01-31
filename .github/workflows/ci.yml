@@ -29,6 +29,10 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+          registry-url: "https://registry.npmjs.org"
       - uses: actions/setup-go@v5
         with:
           go-version: "1.22"
@@ -52,3 +56,5 @@ jobs:
       - name: Publish to NPM
         if: steps.check_tag.outputs.exists == 'false'
         run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
