@@ -76,6 +76,11 @@ func main() {
 						Name:  "allow-empty",
 						Usage: "Allow the commit message to be empty",
 					},
+					&cli.BoolFlag{
+						Name:    "no-verify",
+						Aliases: []string{"n"},
+						Usage:   "Bypass git hooks",
+					},
 				},
 				Action: func(ctx *cli.Context) error {
 					convention, err := determineConvention()
@@ -91,6 +96,10 @@ func main() {
 					args := []string{"commit", "-m", msg}
 					if ctx.Bool("allow-empty") {
 						args = append(args, "--allow-empty")
+					}
+
+					if ctx.Bool("no-verify") {
+						args = append(args, "--no-verify")
 					}
 
 					cmd := exec.Command("git", args...)
