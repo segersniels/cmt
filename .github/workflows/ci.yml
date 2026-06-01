@@ -31,6 +31,17 @@ jobs:
       - name: Get current package version
         id: current_version
         run: echo "version=$(make version)" >> $GITHUB_OUTPUT
+      - name: Check NPM package version
+        id: check_npm_version
+        run: |
+          package_name=$(node -p "require('./package.json').name")
+          version="${{ steps.current_version.outputs.version }}"
+
+          if npm view "${package_name}@${version}" version >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: mukunku/tag-exists-action@v1.4.0
         id: check_tag
         with:
@@ -45,5 +56,5 @@ jobs:
           prerelease: false
           replacesArtifacts: true
       - name: Publish to NPM
-        if: steps.check_tag.outputs.exists == 'false'
+        if: steps.check_npm_version.outputs.exists == 'false'
         run: npm publish
