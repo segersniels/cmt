@@ -28,10 +28,7 @@ npm install -g @segersniels/cmt
 ### Script
 
 ```bash
-# Install in the current directory
 curl -sSL https://raw.githubusercontent.com/segersniels/cmt/master/scripts/install.sh | bash
-# Install in /usr/local/bin
-curl -sSL https://raw.githubusercontent.com/segersniels/cmt/master/scripts/install.sh | sudo bash -s /usr/local/bin
 ```
 
 Or download one of the released binaries for your operating system [here](https://github.com/segersniels/cmt/releases).
