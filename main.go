@@ -111,6 +111,18 @@ func main() {
 					return nil
 				},
 			},
+			{
+				Name:  "update",
+				Usage: "Update cmt to the latest version",
+				Action: func(ctx *cli.Context) error {
+					cmd := exec.Command("bash", "-c", "curl -fsSL https://raw.githubusercontent.com/segersniels/cmt/master/scripts/install.sh | bash")
+					cmd.Stdin = os.Stdin
+					cmd.Stdout = os.Stdout
+					cmd.Stderr = os.Stderr
+
+					return cmd.Run()
+				},
+			},
 		},
 	}
 

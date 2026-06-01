@@ -63,6 +63,12 @@ cmt c
 
 Follow the interactive prompts to construct your commit.
 
+Update `cmt` to the latest version:
+
+```
+cmt update
+```
+
 ## Configuration
 
 `cmt` uses a `.cmtrc.json` file to store configuration. You can edit this file manually or run `cmt init` to set up your preferences.
